@@ -1,0 +1,31 @@
+div footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    // align-items: center;
+}
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+    .icons img{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    div h3{
+        text-align: center;
+        margin-bottom: 30px;
+        
+    }
+    h3{
+        color: map-get( $f-color , principal );
+        font-size: map-get( $f-px , parrafo );
+        // font-family: map-get( $f-type , titulo );
+        font-weight: map-get( $f-weight , parrafo );
+        font-family: 'Montserrat', sans-serif;
+    }

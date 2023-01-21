@@ -1,0 +1,58 @@
+main{
+   
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div{
+        display: inline-block;
+        border: 3px solid white;
+        border-radius: 10px;
+        padding: 30px;
+background-color: rgba(210, 210, 210, 0.616);
+        h1{
+            color: map-get( $f-color , principal );
+            font-size: map-get( $f-px , titulo );
+        // font-family: map-get( $f-type , titulo );
+            font-weight: map-get( $f-weight , titulo );
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    
+}
+
+main .aca{
+
+
+    display: inline-block;
+    border: none;
+    background: none;
+    padding: 15px;
+    text-align: center;
+
+    
+    h2{
+        color: map-get( $f-color , principal );
+        font-size: map-get( $f-px , sub-titulo );
+        // font-family: map-get( $f-type , titulo );
+        font-weight: map-get( $f-weight , sub-titulo );
+        font-family: 'Montserrat', sans-serif;
+    }
+    p{
+        color: map-get( $f-color , principal );
+        font-size: map-get( $f-px , parrafo );
+        // font-family: map-get( $f-type , titulo );
+        font-weight: map-get( $f-weight , parrafo );
+        font-family: 'Montserrat', sans-serif; 
+    }
+}
+    .mapgoogle{
+        display: inline-block;
+        width: 100%;
+        height: 240px;  
+        padding: 0px;
+        border: none; 
+ }
+   

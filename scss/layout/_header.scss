@@ -1,0 +1,38 @@
+    header{
+        grid-area: header;
+        @include grid( 2 , 0em);  
+
+        width: 100%;
+        height: 100%;
+        
+        }
+
+    .logo{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 15px;
+        padding-left: 15px;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        
+        
+    }    
+    .nav-bar{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }    
+    a{
+        color: map-get( $f-color , principal );
+        font-size: map-get( $f-px , parrafo );
+        // font-family: map-get( $f-type , titulo );
+        font-weight: map-get( $f-weight , parrafo );
+        font-family: 'Montserrat', sans-serif;
+        text-decoration: none;
+    }  
+    
+    

@@ -1,0 +1,41 @@
+
+    
+   
+        
+     .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 200px;
+        grid-template-areas: 
+        "header"
+        "main"      
+        "footer"
+        ;
+        background-image: url(/img/fondo-lamparas-vintage.png);
+        background-color: purple;
+        
+        background-size: cover;
+        height: 100vh;
+    
+    
+     
+    
+    }
+    .container-aca{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 200px;
+        grid-template-areas: 
+        "header"
+        "main"      
+        "footer"
+        ;
+        background-color: blueviolet;
+        
+        
+       
+        
+
+    }
+
+
