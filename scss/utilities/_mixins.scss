@@ -3,6 +3,7 @@
     grid-template-columns: repeat( $columnas , 1fr );
     gap: $espacio;
 
+
     
     
 }
@@ -15,3 +16,26 @@
     flex-direction: row;
 }
 
+@mixin card{
+    display: block;       
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color:gray;
+    box-shadow: 19px 18px 21px -4px rgba(147,142,142,0.6);
+    -webkit-box-shadow: 19px 18px 21px -4px rgba(147,142,142,0.6);
+    -moz-box-shadow: 19px 18px 21px -4px rgba(147,142,142,0.6);
+    height: 350px;
+    width: 240px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    .titulo{
+        margin-top: 10px;
+        
+    }
+    button{
+       color: red;
+    }
+}

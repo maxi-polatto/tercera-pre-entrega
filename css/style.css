@@ -31,23 +31,59 @@ header {
   align-items: center;
 }
 
+div a {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 a {
   color: white;
   font-size: 15px;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
+  text-align: center;
 }
 
-.container {
+a:hover {
+  color: rgb(248, 2, 2);
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 580px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px, 160;
+    grid-area: "logo" "nav";
+  }
+  header .logo {
+    display: flex;
+    justify-content: center;
+  }
+  header .nav-bar {
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+  header .nav-bar a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.container-idx {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 200px;
   grid-template-areas: "header" "main" "footer";
-  background-image: url(/img/fondo-lamparas-vintage.png);
-  background-color: purple;
+  background-image: url("../img/fondo-lamparas-vintage.png");
   background-size: cover;
   height: 100vh;
+  width: 100%;
 }
 
 .container-aca {
@@ -55,9 +91,54 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 200px;
   grid-template-areas: "header" "main" "footer";
+  background-image: url("../img/fondo-figma.png");
+  background-size: cover;
   background-color: blueviolet;
 }
 
+.container-des {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 200px;
+  grid-template-areas: "header" "main" "footer";
+  background-image: url("../img/fondo-figma.png");
+  background-size: cover;
+}
+
+.container-ct {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 200px;
+  grid-template-areas: "header" "main" "footer";
+  background-image: url("../img/lamparas-colgantes-1536x958.jpg");
+  background-size: cover;
+  background-color: blueviolet;
+}
+
+.container-ti {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 200px;
+  grid-template-areas: "header" "main" "footer";
+  background-image: url("../img/fondo-figma.png");
+  background-size: cover;
+  background-color: purple;
+}
+
+@media screen and (max-width: 580px) {
+  .container-ti {
+    grid-template-rows: 280px 1fr 200px;
+  }
+  .container-aca {
+    grid-template-rows: 280px 1fr 200px;
+  }
+  .container-des {
+    grid-template-rows: 280px 1fr 200px;
+  }
+}
 div footer {
   grid-area: footer;
   display: flex;
@@ -77,7 +158,7 @@ div footer {
   padding-right: 20px;
 }
 
-div h3 {
+.ft h3 {
   text-align: center;
   margin-bottom: 30px;
 }
@@ -87,23 +168,30 @@ h3 {
   font-size: 15px;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 
-main {
+h3 {
+  font-size: 13px;
+  height: 50%;
+}
+
+.idx {
   grid-area: main;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main div {
-  display: inline-block;
+.idx .id-tit {
+  align-items: center;
   border: 3px solid white;
   border-radius: 10px;
   padding: 30px;
   background-color: rgba(210, 210, 210, 0.616);
+  text-align: center;
 }
-main div h1 {
+.idx .id-tit h1 {
   color: white;
   font-size: 30px;
   font-weight: bold;
@@ -111,11 +199,18 @@ main div h1 {
 }
 
 main .aca {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   border: none;
   background: none;
   padding: 15px;
   text-align: center;
+}
+main .aca h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
 }
 main .aca h2 {
   color: white;
@@ -137,6 +232,226 @@ main .aca p {
   border: none;
 }
 
+.main-des {
+  height: 100%;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-des .des {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main-des .des h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+.main-des .des .carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.main-ct {
+  margin-top: 45PX;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-ti {
+  grid-area: main;
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card-1 {
+  display: block;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: gray;
+  box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  -webkit-box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  -moz-box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  height: 350px;
+  width: 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+.card-1 .titulo {
+  margin-top: 10px;
+}
+.card-1 button {
+  color: red;
+}
+.card-1 .img-card {
+  width: 100%;
+  height: 50%;
+  background-image: url(/img/card-1.png);
+}
+.card-1 .titulo {
+  margin-top: 10px;
+}
+
+.card-2 {
+  display: block;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: gray;
+  box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  -webkit-box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  -moz-box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  height: 350px;
+  width: 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+.card-2 .titulo {
+  margin-top: 10px;
+}
+.card-2 button {
+  color: red;
+}
+.card-2 .img-card {
+  width: 100%;
+  height: 50%;
+  background-image: url(/img/card-1.png);
+}
+.card-2 .titulo {
+  margin-top: 10px;
+}
+
+.card-3 {
+  display: block;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: gray;
+  box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  -webkit-box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  -moz-box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  height: 350px;
+  width: 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+.card-3 .titulo {
+  margin-top: 10px;
+}
+.card-3 button {
+  color: red;
+}
+.card-3 .img-card {
+  width: 100%;
+  height: 50%;
+  background-image: url(/img/card-1.png);
+}
+.card-3 .titulo {
+  margin-top: 10px;
+}
+
+.card-4 {
+  display: block;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: gray;
+  box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  -webkit-box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  -moz-box-shadow: 19px 18px 21px -4px rgba(147, 142, 142, 0.6);
+  height: 350px;
+  width: 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+.card-4 .titulo {
+  margin-top: 10px;
+}
+.card-4 button {
+  color: red;
+}
+.card-4 .img-card {
+  width: 100%;
+  height: 50%;
+  background-image: url(/img/card-1.png);
+}
+.card-4 .titulo {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 580px) {
+  .main-aca {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    margin-top: 45px;
+  }
+  .main-aca .main-aca h1 {
+    margin-top: 45px;
+  }
+  .main-aca {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    margin-top: 45px;
+  }
+  .main-aca .main-aca h1 {
+    margin-top: 45px;
+  }
+  .main-ct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    margin-top: 100px;
+  }
+  .main-ct .main-ct h1 {
+    margin-top: 45px;
+  }
+  .main-des .des {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .idx {
+    margin-top: 200px;
+  }
+  .idx .id-tit {
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    display: block;
+    justify-content: center;
+    align-content: center;
+  }
+}
 .asi {
   grid-area: aside;
 }
